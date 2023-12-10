@@ -3,9 +3,8 @@ import './App.css';
 import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
 
-// OMDB API key--> 5eeae8d1
 
-const API_URL = 'http://www.omdbapi.com?apikey=5eeae8d1'
+const API_URL = 'http://www.omdbapi.com?apikey=<provided_api_key>'
 
 
 
