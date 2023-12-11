@@ -4,7 +4,7 @@ import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=<provided_api_key>'
+const API_URL = 'http://www.omdbapi.com?apikey=5eeae8d1'
 
 
 
@@ -28,7 +28,6 @@ const App = () =>
 
     useEffect(() => {
         searchMoives('Spiderman');
-
     },[]);
 
     // const movie1 = {
@@ -46,10 +45,7 @@ const App = () =>
                 placeholder='Search for movies'
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value) } />
-                <img
-                src={SearchIcon}
-                alt='search'
-                onClick={() => searchMoives(searchTerm) } />
+                <img src={SearchIcon} alt='search' onClick={() => searchMoives(searchTerm) }/>
             </div>
             {movies.length > 0 ? (<div className='container'>{movies.map((movie) =>(<MovieCard movie={movie} />) )}</div>) : (<div className='empty'><h2>No movies found</h2></div>)
 
