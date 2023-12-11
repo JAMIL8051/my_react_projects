@@ -24,7 +24,7 @@ const App = () =>
     };
 
     useEffect(() => {
-        searchMoives("Spiderman");
+        searchMoives("Batman");
     },[]);
 
     // const movie1 = {
