@@ -4,10 +4,7 @@ import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=5eeae8d1'
-
-
-
+const API_URL = 'https://www.omdbapi.com?apikey=5eeae8d1'
 
 // Main functional component!!!
 const App = () =>
@@ -27,7 +24,7 @@ const App = () =>
     };
 
     useEffect(() => {
-        searchMoives('Spiderman');
+        searchMoives("Spiderman");
     },[]);
 
     // const movie1 = {
