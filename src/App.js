@@ -27,6 +27,13 @@ const App = () =>
         searchMoives("Batman");
     },[]);
 
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter")
+        {
+            searchMoives(searchTerm);
+        }
+    };
+
     // const movie1 = {
     //     "Title": "Amazing Spiderman Syndrome",
     //     "Year": "2012",
@@ -36,12 +43,13 @@ const App = () =>
     // }
     return (
         <div className='app'>
-            <h1>My React MovieLand</h1>
+            <h1>Welocme to My React MovieLand</h1>
             <div className='search'>
                 <input
                 placeholder='Search for movies'
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value) } />
+                onChange={(e) => setSearchTerm(e.target.value) }
+                onKeyPress={handleKeyPress} />
                 <img src={SearchIcon} alt='search' onClick={() => searchMoives(searchTerm) }/>
             </div>
             {movies.length > 0 ? (<div className='container'>{movies.map((movie) =>(<MovieCard movie={movie} />) )}</div>) : (<div className='empty'><h2>No movies found</h2></div>)
